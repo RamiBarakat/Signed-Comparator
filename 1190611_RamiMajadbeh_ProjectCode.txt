@@ -1,0 +1,836 @@
+--//////////////////////Gates////////////////////////////////////////////////////////
+ 
+--//////////////////////and///////////////////////////////////////////////////////
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY and2 is
+	port(a,b: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of and2 is
+
+begin
+
+	f <= a and b after 7ns;
+	
+end;	  
+
+ --and3
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY and3 is
+	port(a,b,c: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of and3 is
+
+begin
+
+	f <= (a and b and c) after 7ns;
+	
+end;	  
+
+--and4
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY and4 is
+	port(a,b,c,d: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of and4 is
+
+begin
+
+	f <= (a and b and c and d) after 7ns;
+	
+end;		
+
+
+--and5
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY and5 is
+	port(a,b,c,d,e: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of and5 is
+
+begin
+
+	f <= (a and b and c and d and e) after 7ns;
+	
+end;	
+
+--and6
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY and6 is
+	port(a,b,c,d,e,g: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of and6 is
+
+begin
+
+	f <= (a and b and c and d and e and g) after 7ns;
+	
+end;				   
+
+--and7
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY and7 is
+	port(a,b,c,d,e,g,h: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of and7 is
+
+begin
+
+	f <= (a and b and c and d and e and g and h) after 7ns;
+	
+end;	
+
+--and8
+ library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY and8 is
+	port(a,b,c,d,e,g,h,i: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of and8 is
+
+begin
+
+	f <= (a and b and c and d and e and g and h and i) after 7ns;
+	
+end;	
+
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY and9 is
+	port(a,b,c,d,e,g,h,i,z: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of and9 is
+
+begin
+
+	f <= (a and b and c and d and e and g and h and i and z) after 7ns;
+	
+end;
+	
+
+--////////////////////////////not///////////////////////////////////////////////////////
+ library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY not2 is
+	port(a: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of not2 is
+
+begin
+
+	f <= not (a) after 2ns;
+	
+	
+end;
+
+   --//////////////////////nand////////////////////////////////////////////////////////
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY nand2 is
+	port(a,b: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of nand2 is
+
+begin
+
+	f <= a nand b after 5ns;
+	
+end;
+
+  
+  --/////////////////////////////nor///////////////////////////////////////////////////
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY nor2 is
+	port(a,b: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of nor2 is
+
+begin
+
+	f <= a nor b after 5ns;
+	
+end;
+
+  --////////////////////////////////or2///////////////////////////////////////////
+
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY or2 is
+	port(a,b: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of or2 is
+
+begin
+
+	f <= a or b;
+	
+end;				   
+--////////////////////////or3//////////////////////////////////////////////
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY or3 is
+	port(a,b,c: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of or3 is
+
+begin
+
+	f <= a or b or c after 7ns;
+	
+end;	
+
+
+
+--/////////////////////////////////////////////////////////////////////////
+  library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY or8 is
+	port(a,b,c,d,e,i,g,h: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of or8 is
+
+begin
+
+	f <= (a or b or c or d or e or i or g or h) after 7ns;
+	
+end;				   
+
+
+
+
+
+--///////////////////////xnor//////////////////////////////////////////////
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY xnor2 is
+	port(a,b: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of xnor2 is
+
+begin
+
+	f <= a xnor b after 9ns;
+	
+end;					  
+
+
+--/////////////////////////xor///////////////////////////////////////////
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ENTITY xor2 is
+	port(a,b: in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of xor2 is
+
+begin
+
+f <= a xor b after 12ns;
+	
+end;
+
+
+--//////////////////////////////////////////////////////////////////////////////  
+library	ieee;
+use ieee.std_logic_1164.all;
+
+entity onebit is
+	port(x,y,g,l:in std_logic;
+	gt,lt,eq: inout std_logic);
+end entity;
+
+architecture simple of onebit is
+signal ynot,gnot,lnot,xnot,gt1,gt2,gt3,lt1,lt2,lt3: std_logic:='0';
+begin			
+	
+not1: entity work.not2(simple) port map(y,ynot);
+not2d: entity work.not2(simple) port map(g,gnot);
+not3: entity work.not2(simple) port map(l,lnot);
+not4: entity work.not2(simple) port map(x,xnot);
+
+gte1: entity work.and2(simple) port map(x,ynot,gt1); 
+gte2: entity work.and2(simple) port map(x,g,gt2);
+gte3: entity work.and2(simple) port map(ynot,g,gt3);	
+gtef: entity work.or3(simple)  port map (gt1,gt2,gt3,gt);
+	
+
+lte1: entity work.and2(simple) port map (xnot,y,lt1);
+lte2: entity work.and2(simple) port map (xnot,l,lt2);
+lte3: entity work.and2(simple) port map (y,l,lt3);
+ltef: entity work.or3(simple)  port map (lt1,lt2,lt3,lt);
+	
+eq1: entity work.nor2(simple) port map (lt,gt,eq);	
+	
+	
+
+--gt <= (x and  not y) or (x and g) or (not y and g);
+--eq <= (not x and not y and not g and not l) or (x and y and not g and not l);
+--lt <= (not x and y) or (not x and l) or (y and l);
+	
+	
+	
+end;
+
+--///////////////////////////////MUX/////////////////////////////////////////////////////////////////////
+
+
+library	ieee;
+use ieee.std_logic_1164.all;
+
+entity mux_n is 
+	
+	port (a,b,s: in std_logic;
+	y: out std_logic );	  
+end;
+
+architecture num1 of mux_n is 
+
+begin
+	
+	y <= a when s <= '0'
+	else  b when s<= '1';
+	
+	
+end;  		  
+--////////////////////////////////////////////DFF//////////////////////////////////////////////////////
+
+library	ieee;
+use ieee.std_logic_1164.all;
+
+entity DFF is
+	port(d,clk:in std_logic;
+	f: out std_logic);
+end entity;
+
+architecture simple of DFF is
+begin
+	process(clk)
+	begin
+		
+		if(rising_edge(clk)) then
+			f<=d ;
+		end if;
+		
+	end process;
+end;
+
+architecture simple1 of DFF is
+begin
+	process(clk)
+	begin
+		
+		if(falling_edge(clk)) then
+			f<=d ;
+		end if;
+		
+	end process;
+end;
+
+ 
+--////////////////////////////////////////////stage2///////////////////////////////////////////////////
+
+   
+library ieee;
+use ieee.std_logic_1164.all; 
+
+ entity MagnitudeComparator is 
+	 port(aa,bb: in std_logic_vector(7 downto 0);
+	 clk : in std_logic;
+	 gt,eq,lt : inout std_logic);
+ end entity;
+ 
+ 
+ architecture simple of MagnitudeComparator is
+ 
+ signal a,b,anew,bnew,abxor,aband,gtt,ltt,eqq: std_logic_vector(7 downto 0):= (others => '0');  
+ signal hxor,amux,bmux,ac,bc,aout,bout,gtm,ltm,eqm: std_logic;
+  
+ begin	
+	 
+	 y: for i in 0 to 7 generate
+	
+		dff3: entity work.DFF(simple) port map(aa(i),clk,a(i));
+	     dff4: entity work.DFF(simple) port map(bb(i),clk,b(i)); 
+		 
+	 end generate;
+	 
+	 
+	 --hxor <= a(7) xor b(7);
+	 h: ENTITY work.xor2(simple) PORT MAP (a(7),b(7),hxor);
+		 
+		 
+	--ac <= not a(7);	 
+	ww: ENTITY work.not2(simple) port map (a(7),ac);
+	we: ENTITY work.not2(simple) port map (b(7),bc);	 
+	--bc <= not b(7);	 
+		 
+	 r: ENTITY work.mux_n(num1) port map (a(7),ac,hxor,aout);  
+	 z: ENTITY work.mux_n(num1) port map (b(7),bc,hxor,bout);
+		 
+		 
+	g1: entity work.onebit(simple) port map (a(0),b(0),'0','0',gtt(0),ltt(0),eqq(0));	 
+     g2: entity work.onebit(simple) port map (a(1),b(1),gtt(0),ltt(0),gtt(1),ltt(1),eqq(1));
+	g3: entity work.onebit(simple) port map (a(2),b(2),gtt(1),ltt(1),gtt(2),ltt(2),eqq(2));
+	g4: entity work.onebit(simple) port map (a(3),b(3),gtt(2),ltt(2),gtt(3),ltt(3),eqq(3));
+	g5: entity work.onebit(simple) port map (a(4),b(4),gtt(3),ltt(3),gtt(4),ltt(4),eqq(4));
+	g6: entity work.onebit(simple) port map (a(5),b(5),gtt(4),ltt(4),gtt(5),ltt(5),eqq(5));
+	g7: entity work.onebit(simple) port map (a(6),b(6),gtt(5),ltt(5),gtt(6),ltt(6),eqq(6));
+	g8: entity work.onebit(simple) port map (aout,bout,gtt(6),ltt(6),gtt(7),ltt(7),eqq(7));	
+	
+		 	
+
+     dff1: entity work.DFF(simple1) port map(gtt(7),clk,gtm);
+	dff2: entity work.DFF(simple1) port map(eqq(7),clk,eqm);
+	dff3: entity work.DFF(simple1) port map(ltt(7),clk,ltm);
+		
+gt <= gtm;
+eq <= eqm;
+lt <= ltm;
+		
+		
+ end architecture simple;
+ 
+--////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+   
+ library ieee;
+use ieee.std_logic_1164.all; 
+
+ entity test is
+	 end entity;
+   
+   
+   
+architecture t of test is 
+
+signal a,b: std_logic_vector(7 downto 0);
+signal gt,clk,eq,lt,lmt,eqt,gtt: std_logic:= '0';
+
+begin 	   
+	
+		g1: entity work.MagnitudeComparator(simple) port map (a,b,clk,gt,eq,lt);
+		
+		clk <= not clk after 0.25ns;
+		a <= "10000000","00000000" after 200ns,"01111111" after 400ns,"10000100" after 600ns,"10000000" after 800ns,"00000001" after 1000ns,"11111111" after 1200ns;
+		b <=  "00001000","00000001" after 200ns,"11111111" after 400ns,"10000001" after 600ns,"10000000" after 800ns,"00000010" after 1000ns,"11111111" after 1200ns;		 
+		
+end;
+
+--////////////////////////////////////////////////////stage1////////////////////////////////////////////////
+
+ library ieee;
+use ieee.std_logic_1164.all; 
+
+entity onebitadder is 
+	port (a,b,cin: in std_logic;
+	sum,cout:out std_logic); 
+end entity;
+
+
+architecture simple of onebitadder is
+  signal ab1,n1,n2,n3: std_logic;
+begin
+	g1: entity work.xor2 port map(a,b,ab1);
+    g2: entity work.xor2 port map(cin,ab1,sum);
+		
+	g3: entity work.and2 port map (a,b,n1);
+	g4: entity work.and2 port map (a,cin,n2);	 
+	g5: entity work.and2 port map (b,cin,n3);
+	g6: entity work.or3  port map (n1,n2,n3,cout);	
+		
+end;
+
+ --/////////////////////////////////////////adder comparartor//////////////////////////////////////////////////////////
+ library ieee;
+use ieee.std_logic_1164.all; 
+
+entity addercomp is
+	port(aa,bb : in std_logic_vector(7 downto 0);
+	sum: inout std_logic_vector(7 downto 0);
+	cout,v,lt,eq,gt:inout std_logic:='0';
+	clk: in std_logic);
+end entity;
+
+
+architecture simple of addercomp is
+signal b,a,bcomp: std_logic_vector(7 downto 0);
+signal carry: std_logic_vector(6 downto 0);
+signal notsum7,gtt,ltt,eqq,gtm,ltm,eqm: std_logic;
+begin  
+	
+	df: for i in 0 to 7 generate
+		df1: entity work.dff(simple) port map(aa(i),clk,a(i)); 
+		df2: entity work.dff(simple) port map(bb(i),clk,b(i)); 	
+	 end generate df;
+	
+	
+	f1 : for i in 0 to 7 generate 
+		  g1 : entity work.xor2 port map('1',b(i),bcomp(i)); 
+	     end generate;		
+	
+	
+		g2: entity work.onebitadder(simple) port map(a(0),bcomp(0),'1',sum(0),carry(0));
+		g3: entity work.onebitadder(simple) port map(a(1),bcomp(1),carry(0),sum(1),carry(1));	
+		g4: entity work.onebitadder(simple) port map(a(2),bcomp(2),carry(1),sum(2),carry(2));
+		g5: entity work.onebitadder(simple) port map(a(3),bcomp(3),carry(2),sum(3),carry(3));
+		g6: entity work.onebitadder(simple) port map(a(4),bcomp(4),carry(3),sum(4),carry(4));
+		g7: entity work.onebitadder(simple) port map(a(5),bcomp(5),carry(4),sum(5),carry(5));
+		g8: entity work.onebitadder(simple) port map(a(6),bcomp(6),carry(5),sum(6),carry(6));
+		g9: entity work.onebitadder(simple) port map(a(7),bcomp(7),carry(6),sum(7),cout);  
+			
+		hh: entity work.xor2 port map (cout,carry(6),v);	  
+		not1: entity work.not2(simple) port map(sum(7),notsum7);	
+		mux: entity work.mux_n(num1) port map (sum(7),notsum7,v,ltt);
+		no4: entity work.nor7(simple) port map (sum(0),sum(1),sum(2),sum(3),sum(4),sum(5),sum(6),sum(7),eqq);
+		no5: entity work.nor2(simple) port map (eqq,ltt,gtt);	
+			
+		
+		dfo: entity work.dff(simple1) port map (gtt,clk,gtm);
+		df6: entity work.dff(simple1) port map (ltt,clk,ltm);	
+		df7: entity work.dff(simple1) port map (eqq,clk,eqm);		
+
+gt <= gtm;
+eq <= eqm;
+lt <= ltm;			
+			
+								    
+end;
+--/////////////////////////////////simple testbench////////////////////////////////////////////////////////////////////////////
+
+     
+ library ieee;
+use ieee.std_logic_1164.all; 
+
+ entity test1 is
+	 end entity;
+   
+   
+   
+architecture t of test1 is 
+
+signal a,b,sum: std_logic_vector(7 downto 0);
+signal cout,v,lt,eq,gt,clk:std_logic:='0';
+
+begin 	   
+	
+		g1: entity work.addercomp(simple) port map (a,b,sum,cout,v,lt,eq,gt,clk);
+		
+		clk <= not clk after 50 ns;
+		a <= "11111111","00001000" after 200ns,"00000000" after 300ns,"00000001" after 400ns,"01111111" after 500ns,"10000100" after 600ns,"10000000" after 800ns,"00000001" after 1000ns,"11111111" after 1200ns;
+		b <= "01111111","10000000" after 200ns,"00000001" after 300ns,"00000000" after 400ns,"11111111" after 500ns,"10000001" after 600ns,"10000000" after 800ns,"00000010" after 1000ns,"00000001" after 1200ns;		 
+		
+end;
+
+--///////////////////////////////////////BEHVcomp/////////////////////////////////////////////////////////////////////////////
+library ieee;		
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity behcomp is
+	port(a,b: in signed(7 downto 0);
+	gt,eq,lt: out std_logic);
+end;						
+   
+   
+architecture simple of behcomp is 
+ 
+begin  
+	process(a,b) 
+begin
+	
+	gt <= '0';
+	eq <= '0';
+	lt <= '0';
+	
+	if (a>b) then
+		gt <= '1';
+	elsif (a < b) then
+		lt <= '1';
+	else
+		eq <= '1';
+		
+	end if;
+	
+	
+	end process;
+end;
+
+
+ --//////////////////////simple testbench////////////////////////////////////////////////////
+library ieee;		
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity test7 is
+end entity;
+   
+   
+   
+architecture t3 of test7 is 
+
+signal a,b,sum: signed(7 downto 0);
+signal cout,v,gt,lt,eq:std_logic;
+
+begin 	   
+	
+		g1: entity work.behcomp(simple) port map (a,b,gt,eq,lt);
+		
+		--clk <= not clk after 0.25ns;
+		a <= "11111111","00001000" after 200ns,"00000000" after 300ns,"00000001" after 400ns,"01111111" after 500ns,"10000100" after 600ns,"10000000" after 800ns,"00000001" after 1000ns,"11111111" after 1200ns;
+		b <= "01111111","10000000" after 200ns,"00000001" after 300ns,"00000000" after 400ns,"11111111" after 500ns,"10000001" after 600ns,"10000000" after 800ns,"00000010" after 1000ns,"01111111" after 1200ns;		 
+		
+end;		   
+
+--//////////////////////////////Verification//////////////////////////////////////////////
+
+
+  --//////////////////////////////test generator////////////////////////////////////////
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_ARITH.ALL;
+USE ieee.std_logic_SIGNED.ALL; 
+
+
+entity TestGenerator is
+  port(clk: in STD_LOGIC;
+  A,B: out STD_LOGIC_VECTOR(7 DOWNTO 0):="00000000";
+  gt,eq,lt: out STD_LOGIC := '0');
+
+end TestGenerator;									   
+
+architecture generator of TestGenerator is
+signal AA,BB: STD_LOGIC_VECTOR(7 downto 0):="00000000";	
+signal gtt,eqq,ltt: STD_LOGIC:='0';
+
+BEGIN
+
+A<=AA;
+B<=BB;
+gt<=gtt;
+eq<=eqq;
+lt<=ltt;
+
+PROCESS (clk,AA,BB)
+
+BEGIN
+
+    
+if(rising_edge(clk)) then
+	if (AA > BB) then
+		 gtt <= '1'   after 125ns;
+	     eqq  <= '0'   after 125ns;
+	     ltt  <= '0'   after 125ns;
+	elsif (AA < BB) then
+		 gtt <= '0' after 125ns;
+	     eqq  <= '0' after 125ns;
+		 ltt  <= '1' after 125ns;
+	else
+	 	gtt <= '0'  after 125ns;
+	 	eqq  <= '1' after 125ns;
+	 	ltt  <= '0' after 125ns;
+		
+		
+	end if;
+end if;	
+END PROCESS;
+
+
+PROCESS
+BEGIN
+	FOR i IN -128 TO 127 LOOP
+		FOR j IN -128 TO 127 LOOP
+			
+
+AA(7 downto 0) <= CONV_STD_LOGIC_VECTOR(i,8);
+BB(7 downto 0) <= CONV_STD_LOGIC_VECTOR(j,8);
+wait until rising_edge(CLK);
+
+	END LOOP;
+		END LOOP;
+			
+WAIT;
+END PROCESS;
+END;  
+
+--////////////////////////////for adder//////////////////////////////////////////////////////////////////
+
+ARCHITECTURE simple of TestGenerator is
+signal AA,BB: STD_LOGIC_VECTOR(7 downto 0):="00000000";	
+signal gtt,eqq,ltt: STD_LOGIC:='0';
+
+BEGIN
+
+A<=AA;
+B<=BB;
+gt<=gtt;
+eq<=eqq;
+lt<=ltt;
+
+process (clk,AA,BB)
+
+BEGIN
+
+    
+if(rising_edge(clk)) then
+	if (AA > BB) then
+		 gtt <= '1'  after 150NS;
+	     eqq  <= '0'  after 150NS;
+	     ltt  <= '0'  after 150NS;
+	elsif (AA < BB) then
+		 gtt <= '0' after 150NS;
+	     eqq  <= '0' after 150NS;
+		 ltt  <= '1'after 150NS;
+	else
+	 	gtt <= '0'  after 150NS;
+	 	eqq  <= '1' after 150NS;
+	 	ltt  <= '0' after 150NS;
+		
+		
+	end if;
+end if;	
+END PROCESS;
+
+
+PROCESS
+BEGIN
+	FOR i IN -128 TO 127 LOOP
+		FOR j IN -128 TO 127 LOOP
+			
+
+AA(7 DOWNTO 0) <= CONV_STD_LOGIC_VECTOR(i,8);
+BB(7 DOWNTO 0) <= CONV_STD_LOGIC_VECTOR(j,8);
+WAIT UNTIL rising_edge(CLK);
+
+	end loop;
+	 end loop;
+	
+			
+wait;
+end process;
+end;
+
+
+--/////////////////////////////////////////////////////////////////////////////////////////////////////////
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_ARITH.ALL;
+
+ENTITY ResultAnalyser IS
+	PORT(CLK: IN STD_LOGIC;
+	Cgt,Ceq,Clt,Rgt,Req,Rlt: IN STD_LOGIC);
+	END ResultAnalyser;
+
+
+ARCHITECTURE analyser OF ResultAnalyser IS
+BEGIN
+
+PROCESS
+	BEGIN
+	assert Cgt = Rgt
+		   and Ceq = Req
+		   and Clt =  Rlt
+	report "RESULTS DOESN'T MATCH"
+	severity error;			
+	
+	WAIT UNTIL rising_edge(CLK); 
+	
+	END PROCESS;
+END;
+
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_ARITH.ALL;  
+
+entity BIST is
+end BIST;	   
+
+--/////////////////////////////////////bench for comp/////////////////////////////////////////////////////////////
+ARCHITECTURE comp OF BIST IS
+signal clk: STD_LOGIC:='0';
+signal A,B: STD_LOGIC_VECTOR(7 downto 0);  
+signal gtCORRECT,eqCORRECT,ltCORRECT,gtMYRESULT,lTMYRESULT,eqMYRESULT: std_logic;  
+
+BEGIN													
+	
+clk <= not clk after 125 NS;
+G1: entity WORK.TestGenerator(generator) port map(clk, A, B, gtCORRECT,eqCORRECT,ltCORRECT);
+G2: entity WORK.MagnitudeComparator(simple) port map(A, B,clk,gtMYRESULT,eqMYRESULT,ltMYRESULT);
+G3: entity WORK.ResultAnalyser(analyser) port map(clk,gtCORRECT,eqCORRECT,ltCORRECT,gtMYRESULT,eqMYRESULT,ltMYRESULT);
+END;
+
+--/////////////////////////////////////////bench for adder//////////////////////////////////////////////////////
+architecture add of BIST IS 
+signal a,b,sum:std_logic_vector(7 downto 0);
+signal cout,v,ltMYRESULT,gtMYRESULT,eqMYRESULT,gtCORRECT,eqCORRECT,ltCORRECT: std_logic; 
+signal clk: std_logic:='0';
+
+begin
+	
+clk <= not clk AFTER 150NS; 
+
+G1: entity WORK.TestGenerator(simple) PORT MAP(clk, a, b, gtCORRECT,eqCORRECT,ltCORRECT);
+G2: entity work.addercomp(simple) port map (a,b,sum,cout,v,ltMYRESULT,eqMYRESULT,gtMYRESULT,clk);
+G3: ENTITY WORK.ResultAnalyser(analyser) PORT MAP(clk,gtCORRECT,eqCORRECT,ltCORRECT,gtMYRESULT,eqMYRESULT,ltMYRESULT);	
+	
+end;
+
+
+
+
+
+   
